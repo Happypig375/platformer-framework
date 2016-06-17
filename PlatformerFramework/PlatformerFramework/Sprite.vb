@@ -8,7 +8,7 @@ Imports System.Security.Permissions
 Public Class Sprite
     Inherits MarshalByRefObject
     Implements ISerializable, ICloneable, IDisposable
-    Protected Friend BitMap As Bitmap
+    Public Property BitMap As Bitmap
     Sub New(BitMap As Bitmap)
         Me.BitMap = BitMap
     End Sub
@@ -142,22 +142,70 @@ Public Class Sprite
     End Sub
     ' Properties
     <Browsable(False)>
-    Public ReadOnly Property Flags As Integer = BitMap.Flags
+    Public ReadOnly Property Flags As Integer
+        Get
+            Return BitMap.Flags
+        End Get
+    End Property
     <Browsable(False)>
-    Public ReadOnly Property FrameDimensionsList As Guid() = BitMap.FrameDimensionsList
+    Public ReadOnly Property FrameDimensionsList As Guid()
+        Get
+            Return BitMap.FrameDimensionsList
+        End Get
+    End Property
     <DefaultValue(False), Browsable(False), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
-    Public ReadOnly Property Height As Integer = BitMap.Height
-    Public ReadOnly Property HorizontalResolution As Single = BitMap.HorizontalResolution
+    Public ReadOnly Property Height As Integer
+        Get
+            Return BitMap.Height
+        End Get
+    End Property
+    Public ReadOnly Property HorizontalResolution As Single
+        Get
+            Return BitMap.HorizontalResolution
+        End Get
+    End Property
     <Browsable(False)>
-    Public Property Palette As ColorPalette = BitMap.Palette
-    Public ReadOnly Property PhysicalDimension As SizeF = BitMap.PhysicalDimension
-    Public ReadOnly Property PixelFormat As PixelFormat = BitMap.PixelFormat
+    Public Property Palette As ColorPalette
+        Get
+            Return BitMap.Palette
+        End Get
+        Set(value As ColorPalette)
+            BitMap.Palette = value
+        End Set
+    End Property
+
+    Public ReadOnly Property PhysicalDimension As SizeF
+        Get
+            Return BitMap.PhysicalDimension
+        End Get
+    End Property
+    Public ReadOnly Property PixelFormat As PixelFormat
+        Get
+            Return BitMap.PixelFormat
+        End Get
+    End Property
     <Browsable(False)>
-    Public ReadOnly Property PropertyIdList As Integer() = BitMap.PropertyIdList
+    Public ReadOnly Property PropertyIdList As Integer()
+        Get
+            Return BitMap.PropertyIdList
+        End Get
+    End Property
     <Browsable(False)>
-    Public ReadOnly Property PropertyItems As PropertyItem() = BitMap.PropertyItems
-    Public ReadOnly Property RawFormat As ImageFormat = BitMap.RawFormat
-    Public ReadOnly Property Size As Size = BitMap.Size
+    Public ReadOnly Property PropertyItems As PropertyItem()
+        Get
+            Return BitMap.PropertyItems
+        End Get
+    End Property
+    Public ReadOnly Property RawFormat As ImageFormat
+        Get
+            Return BitMap.RawFormat
+        End Get
+    End Property
+    Public ReadOnly Property Size As Size
+        Get
+            Return BitMap.Size
+        End Get
+    End Property
     <Localizable(False), Bindable(True), DefaultValue(CStr(Nothing)), TypeConverter(GetType(StringConverter))>
     Public Property Tag As Object
         Get
@@ -167,10 +215,17 @@ Public Class Sprite
             BitMap.Tag = value
         End Set
     End Property
-    Public ReadOnly Property VerticalResolution As Single = BitMap.VerticalResolution
+    Public ReadOnly Property VerticalResolution As Single
+        Get
+            Return BitMap.VerticalResolution
+        End Get
+    End Property
     <DefaultValue(False), Browsable(False), DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
-    Public ReadOnly Property Width As Integer = BitMap.Width
-
+    Public ReadOnly Property Width As Integer
+        Get
+            Return BitMap.Width
+        End Get
+    End Property
 #End Region
 #Region "Inherits Bitmap"
 #If False Then

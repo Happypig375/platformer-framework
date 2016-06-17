@@ -84,7 +84,7 @@ Partial Class Form1
         Me.Player1.ShootInAir = Nothing
         Me.Player1.ShootSprite = Nothing
         Me.Player1.Size = New System.Drawing.Size(100, 50)
-        Me.Player1.Sprite = Nothing
+        Me.Player1.CurrentSprite = Nothing
         Me.Player1.StopWhenMeleeAttack = False
         Me.Player1.TabIndex = 0
         Me.Player1.TabStop = False

@@ -1,13 +1,6 @@
 ﻿Public Class Player
     Inherits [Object]
-
-    <Category("_Appearance")> Public Property FixedOnScreenPosition As Boolean
-    <Category("_Appearance")> Public Property BaseColor As Color
-    <Category("_Appearance")> Public Property AnimationSpeed As Byte = 10
-    <Category("_Appearance")> Public Property Depth As Integer
-    <Category("_Appearance")> Public Property Transparency As Byte = 100
-
-    <Category("_Sprites")> Public Property MainSprite As Sprite
+    <Category("_Sprites")> Public Overrides Property MainSprite As Sprite
     <Category("_Sprites")> Public Property MoveSprite As Sprite
     <Category("_Sprites")> Public Property JumpSprite As Sprite
     <Category("_Sprites")> Public Property FreezeLastFrame As Boolean
@@ -66,14 +59,3 @@
     <Category("_Sounds")> Public Property Hit As IO.Stream
     <Category("_Sounds")> Public Property Dead As IO.Stream
 End Class
-Public Enum SlopeWalking As Byte
-    No
-    Normal
-    Extreme
-End Enum
-Public Enum Direction As UShort
-    Up
-    Right = 90
-    Down = 180
-    Left = 270
-End Enum
