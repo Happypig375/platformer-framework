@@ -23,7 +23,7 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Player1 = New Platformer.Player()
-        Me.Ladder1 = New Platformer.Ladder()
+        Me.Ladder1 = New Platformer.Block()
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Ladder1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -104,8 +104,8 @@ Partial Class Form1
         Me.Ladder1.Active = True
         Me.Ladder1.AnimationSpeed = CType(10, Byte)
         Me.Ladder1.BaseColor = System.Drawing.Color.Empty
-        Me.Ladder1.BlockType = CType(((Platformer.BlockType.Disappearing Or Platformer.BlockType.Cloud) _
-            Or Platformer.BlockType.lenny), Platformer.BlockType)
+        Me.Ladder1.BlockType = CType(((Platformer.BlockType.Disappearing Or Platformer.BlockType.Cloud)
+            ), Platformer.BlockType)
         Me.Ladder1.CheckSwitch = 0
         Me.Ladder1.CurrentSprite = Nothing
         Me.Ladder1.Depth = 0
@@ -137,5 +137,5 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents Player1 As Player
-    Friend WithEvents Ladder1 As Ladder
+    Friend WithEvents Ladder1 As Block
 End Class
