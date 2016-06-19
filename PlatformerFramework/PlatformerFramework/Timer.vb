@@ -13,5 +13,5 @@ Public Class Timer
     <Category("_Action")> Public Property TimerID As Integer
     <Category("_Action")> Public Property Music As IO.Stream
 
-    <Category("_Action")> Public Event TimeIsUp(sender As Object, e As EventArgs)
+    <Category("_Action")> Public Event TimeIsUp(sender As Object, e As Timers.ElapsedEventArgs)
 End Class

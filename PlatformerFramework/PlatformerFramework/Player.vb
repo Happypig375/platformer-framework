@@ -1,4 +1,7 @@
-﻿Public Class Player
+﻿''' <summary>
+''' This object is a player.
+''' </summary>
+Public Class Player
     Inherits Subject
     <Category("_Sprites")> Public Overrides Property MainSprite As Sprite
         Get

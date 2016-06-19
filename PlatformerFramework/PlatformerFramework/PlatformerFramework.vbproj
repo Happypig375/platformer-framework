@@ -70,6 +70,9 @@
     <Compile Include="Button.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="FinishLevel.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Health.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -89,13 +92,16 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Ladder.vb">
+    <Compile Include="Block.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Lives.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Object.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ParticleEmitter.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Score.vb">

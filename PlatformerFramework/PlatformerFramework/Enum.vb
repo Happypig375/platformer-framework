@@ -41,7 +41,7 @@ Public Enum ButtonType As Byte
     CustomButton
 End Enum
 <Flags>
-Public Enum BlockType As Byte
+Public Enum BlockType As UShort
     ''' <summary>
     ''' This object is a block.
     ''' </summary>
@@ -59,15 +59,47 @@ Public Enum BlockType As Byte
     ''' </summary>
     Ladder = 4
     ''' <summary>
-    ''' This object is a block that can move left-right. The player can push this block.
+    ''' This object is a pushable block. The player can push this object left-right depending on the moving direction.
     ''' </summary>
     MoveLeftRight = 8
     ''' <summary>
-    ''' This object is a block that can move up-down. The player can push this block.
+    ''' This object is a pushable block. The player can push this object up-down depending on the moving direction.
     ''' </summary>
     MoveUpDown = 16
     ''' <summary>
+    ''' This object is a pushable block. The player can push this object towards the moving direction.
+    ''' </summary>
+    Pushable = MoveLeftRight Or MoveUpDown
+    ''' <summary>
+    ''' This object is a pushable block that is snapped to grid.
+    ''' </summary>
+    SnapToGrid = 32
+    ''' <summary>
+    ''' This object is a destroyable block. The player can destroy it with bullets.
+    ''' </summary>
+    DestroyableByBullets = 64
+    ''' <summary>
+    ''' This object is a destroyable block. The player can destroy it with a melee.
+    ''' </summary>
+    DestroyableByMelee = 128
+    ''' <summary>
     ''' This object is a destroyable block. The player can destroy it with bullets or a melee.
     ''' </summary>
-    Destroyable = 32
+    Destroyable = DestroyableByBullets Or DestroyableByMelee
+    ''' <summary>
+    ''' This object is a transformer block. The player can change its sprite when touches it from below.
+    ''' </summary>
+    TransformerBelow = 256
+    ''' <summary>
+    ''' This object is a transformer block. The player can change its sprite when touches it from its side.
+    ''' </summary>
+    TransformerSide = 512
+    ''' <summary>
+    ''' This object is a transformer block. The player can change its sprite when touches it from top.
+    ''' </summary>
+    TransformerTop = 1024
+    ''' <summary>
+    ''' This object is a transformer block. The player can change its sprite when touches it.
+    ''' </summary>
+    Transformer = TransformerBelow Or TransformerSide Or TransformerTop
 End Enum
