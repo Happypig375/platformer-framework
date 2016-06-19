@@ -23,11 +23,14 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Player1 = New Platformer.Player()
+        Me.Ladder1 = New Platformer.Ladder()
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Ladder1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Player1
         '
+        Me.Player1.Active = True
         Me.Player1.AnimationSpeed = CType(0, Byte)
         Me.Player1.ApplyGravity = False
         Me.Player1.BaseColor = System.Drawing.Color.Empty
@@ -43,8 +46,10 @@ Partial Class Form1
         Me.Player1.CanShootBullets = False
         Me.Player1.CanShootInAir = True
         Me.Player1.CanUseMeleeInAir = True
+        Me.Player1.CheckSwitch = 0
         Me.Player1.Climb = Nothing
         Me.Player1.ClimbIdle = Nothing
+        Me.Player1.CurrentSprite = Nothing
         Me.Player1.Damage = CType(50, Byte)
         Me.Player1.Dead = Nothing
         Me.Player1.DeadSprite = Nothing
@@ -80,30 +85,57 @@ Partial Class Form1
         Me.Player1.MoveSprite = Nothing
         Me.Player1.Name = "Player1"
         Me.Player1.OverwriteActualHealth = CType(0, Byte)
+        Me.Player1.RemoveObjectWhenSwitch = False
         Me.Player1.Shoot = Nothing
         Me.Player1.ShootInAir = Nothing
         Me.Player1.ShootSprite = Nothing
         Me.Player1.Size = New System.Drawing.Size(100, 50)
-        Me.Player1.CurrentSprite = Nothing
         Me.Player1.StopWhenMeleeAttack = False
         Me.Player1.TabIndex = 0
         Me.Player1.TabStop = False
+        Me.Player1.ToggleActivityWhenSwitch = True
+        Me.Player1.ToggleVisibilityWhenSwitch = True
         Me.Player1.Transparency = CType(0, Byte)
         Me.Player1.UseMomentum = False
         Me.Player1.WalkingOnSlopes = Platformer.SlopeWalking.No
+        '
+        'Ladder1
+        '
+        Me.Ladder1.Active = True
+        Me.Ladder1.AnimationSpeed = CType(10, Byte)
+        Me.Ladder1.BaseColor = System.Drawing.Color.Empty
+        Me.Ladder1.BlockType = CType(((Platformer.BlockType.Disappearing Or Platformer.BlockType.Cloud) _
+            Or Platformer.BlockType.lenny), Platformer.BlockType)
+        Me.Ladder1.CheckSwitch = 0
+        Me.Ladder1.CurrentSprite = Nothing
+        Me.Ladder1.Depth = 0
+        Me.Ladder1.FixedOnScreenPosition = False
+        Me.Ladder1.Location = New System.Drawing.Point(163, 185)
+        Me.Ladder1.MainSprite = Nothing
+        Me.Ladder1.Name = "Ladder1"
+        Me.Ladder1.RemoveObjectWhenSwitch = False
+        Me.Ladder1.Size = New System.Drawing.Size(100, 50)
+        Me.Ladder1.TabIndex = 1
+        Me.Ladder1.TabStop = False
+        Me.Ladder1.ToggleActivityWhenSwitch = True
+        Me.Ladder1.ToggleVisibilityWhenSwitch = True
+        Me.Ladder1.Transparency = CType(100, Byte)
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.Controls.Add(Me.Ladder1)
         Me.Controls.Add(Me.Player1)
         Me.Name = "Form1"
         Me.Text = "Form1"
         CType(Me.Player1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Ladder1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Player1 As Player
+    Friend WithEvents Ladder1 As Ladder
 End Class

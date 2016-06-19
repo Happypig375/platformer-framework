@@ -1,6 +1,13 @@
 ﻿Public Class Player
-    Inherits [Object]
+    Inherits Subject
     <Category("_Sprites")> Public Overrides Property MainSprite As Sprite
+        Get
+            Return MyBase.MainSprite
+        End Get
+        Set(value As Sprite)
+            MyBase.MainSprite = value
+        End Set
+    End Property
     <Category("_Sprites")> Public Property MoveSprite As Sprite
     <Category("_Sprites")> Public Property JumpSprite As Sprite
     <Category("_Sprites")> Public Property FreezeLastFrame As Boolean
