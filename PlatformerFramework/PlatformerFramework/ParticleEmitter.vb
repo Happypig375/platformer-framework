@@ -28,5 +28,10 @@ Public Class ParticleEmitter
     <Category("_TransparencyRandomRange")> Public Property TransparencyMin As UShort = 60
     <Category("_TransparencyRandomRange")> Public Property TransparencyMax As UShort = 100
 
-    <Category("_TransparencyFadeOut")> Public Property TransparencyFadeOutSpeed As Byte = 60
+    <Category("_TransparencyFadeOut")> Public Property TransparencyFadeOutSpeed As Byte = 10
+
+    <Category("_RotationRandomRange")> Public Property RotationMin As UShort = 0
+    <Category("_RotationRandomRange")> Public Property RotationMax As UShort = 360
+
+    <Category("_RotationChange")> Public Property RotationChangeSpeed As Byte = 0
 End Class

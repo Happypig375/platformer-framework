@@ -135,6 +135,9 @@
     <Compile Include="Switch.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Teleporter.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Text.vb">
       <SubType>Component</SubType>
     </Compile>

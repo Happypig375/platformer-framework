@@ -40,6 +40,16 @@ Public Enum ButtonType As Byte
     ''' </summary>
     CustomButton
 End Enum
+Public Enum TeleporterType
+    ''' <summary>
+    ''' This object is a start point, aka departure of teleporting.
+    ''' </summary>
+    StartPoint
+    ''' <summary>
+    ''' This object is an end point, aka destination of teleporting.
+    ''' </summary>
+    EndPoint
+End Enum
 <Flags>
 Public Enum BlockType As UShort
     ''' <summary>
@@ -102,4 +112,20 @@ Public Enum BlockType As UShort
     ''' This object is a transformer block. The player can change its sprite when touches it.
     ''' </summary>
     Transformer = TransformerBelow Or TransformerSide Or TransformerTop
+    ''' <summary>
+    ''' This object is a door.
+    ''' </summary>
+    Door = 2048
+    ''' <summary>
+    ''' This object is a locked block. When a block is locked it needs a key to do anything.
+    ''' </summary>
+    Locked = 4096
+    ''' <summary>
+    ''' This object is a catapult. The catapult throws the player into the air when the player touches it.
+    ''' </summary>
+    Catapult = 8192
+    ''' <summary>
+    ''' This object is quicksand. The quicksand sucks the player into the ground when the player touches it.
+    ''' </summary>
+    Quicksand = 16384
 End Enum

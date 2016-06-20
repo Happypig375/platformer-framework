@@ -8,6 +8,8 @@ Public Class Block
     <Category("_Behaviour")> Public Property PlaySoundWhenPlayerWalksOn As IO.Stream
     <Category("_Behaviour")> Public Property MovingSpeed As Byte
     <Category("_Behaviour")> Public Property IgnoreBullets As Boolean
+    <Category("_Behaviour")> Public Property IgnoreBulletsEvenIfLocked As Boolean
+    <Category("_Behaviour")> Public Property NeedKeyID As Integer
 
     <Category("_WhenDestroyed")> Public Property DestroyedSprite As Sprite
     <Category("_WhenDestroyed")> Public Property DestroySound As IO.Stream
@@ -27,4 +29,17 @@ Public Class Block
     <Category("_WhenPushed")> Public Property PushedPopupIndex As Integer
     <Category("_WhenPushed")> Public Property PushedSwitch As Boolean
     <Category("_WhenPushed")> Public Property PushedSwitchID As Integer
+
+    <Category("_WhenOpened")> Public Property OpenSprite As Sprite
+    <Category("_WhenOpened")> Public Property OpenSound As IO.Stream
+    <Category("_WhenOpened")> Public Property OpenScore As Short
+    <Category("_WhenOpened")> Public Property OpenPopupIndex As Integer
+    <Category("_WhenOpened")> Public Property OpenSwitch As Boolean
+    <Category("_WhenOpened")> Public Property OpenSwitchID As Integer
+
+    <Category("_WhenPush")> Public Property PushSound As IO.Stream
+    <Category("_WhenPush")> Public Property PushPopupIndex As Integer
+    <Category("_WhenPush")> Public Property PushSwitch As Boolean
+    <Category("_WhenPush")> Public Property PushSwitchID As Integer
+    <Category("_WhenPush")> Public Property PushPower As Byte = 10
 End Class
