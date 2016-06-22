@@ -12,7 +12,7 @@ Public Class ParticleEmitter
     <Category("_ShiftRandomRange")> Public Property ShiftHorizontalMin As Short = -2
     <Category("_ShiftRandomRange")> Public Property ShiftHorizontalMax As Short = 2
     <Category("_ShiftRandomRange")> Public Property ShiftVerticalMin As Short = -2
-    <Category("_ShiftRandomRange")> Public Property ShiftVerticalMax As Short = -2
+    <Category("_ShiftRandomRange")> Public Property ShiftVerticalMax As Short = 2
 
     <Category("_ScaleRandomRange")> Public Property ScaleMin As UShort = 80
     <Category("_ScaleRandomRange")> Public Property ScaleMax As UShort = 120

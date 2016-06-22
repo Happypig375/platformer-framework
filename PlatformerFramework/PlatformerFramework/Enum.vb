@@ -3,7 +3,8 @@
     Normal
     Extreme
 End Enum
-Public Enum Direction As UShort
+Public Enum Direction As Short
+    MovingDirection = -1
     Up
     Right = 90
     Down = 180
@@ -49,6 +50,21 @@ Public Enum TeleporterType
     ''' This object is an end point, aka destination of teleporting.
     ''' </summary>
     EndPoint
+End Enum
+Public Enum Range As Byte
+    None
+    [Short] = 10
+    Intermediate = 20
+    Far = 40
+    Infinite = 255
+End Enum
+Public Enum Frequency As Byte
+    None
+    Rare = 10
+    Intermediate = 20
+    Often = 40
+    Always = 254
+    Random
 End Enum
 <Flags>
 Public Enum BlockType As UShort

@@ -2,21 +2,9 @@
 ''' This object is a player.
 ''' </summary>
 Public Class Player
-    Inherits Subject
-    <Category("_Sprites")> Public Overrides Property MainSprite As Sprite
-        Get
-            Return MyBase.MainSprite
-        End Get
-        Set(value As Sprite)
-            MyBase.MainSprite = value
-        End Set
-    End Property
-    <Category("_Sprites")> Public Property MoveSprite As Sprite
+    Inherits Monster
     <Category("_Sprites")> Public Property JumpSprite As Sprite
     <Category("_Sprites")> Public Property FreezeLastFrame As Boolean
-    <Category("_Sprites")> Public Property HitSprite As Sprite
-    <Category("_Sprites")> Public Property DeadSprite As Sprite
-    <Category("_Sprites")> Public Property MeleeAttackSprite As Sprite
     <Category("_Sprites")> Public Property MeleeAttackInAir As Sprite
     <Category("_Sprites")> Public Property ShootSprite As Sprite
     <Category("_Sprites")> Public Property ShootInAir As Sprite
@@ -26,10 +14,7 @@ Public Class Player
     <Category("_Health")> Public Property OverwriteActualHealth As Byte = 0
     <Category("_Health")> Public Property DieWhenOutsideOfLevel As Boolean = True
 
-    <Category("_Moving")> Public Property ApplyGravity As Boolean = True
-    <Category("_Moving")> Public Property WalkingOnSlopes As SlopeWalking = SlopeWalking.Normal
     <Category("_Moving")> Public Property JumpStrength As Byte = 8
-    <Category("_Moving")> Public Property MoveSpeed As Byte = 8
     <Category("_Moving")> Public Property UseMomentum As Boolean
     <Category("_Moving")> Public Property MomentumAcceleration As Byte = 20
     <Category("_Moving")> Public Property MomentumFriction As Byte = 10
@@ -66,6 +51,4 @@ Public Class Player
     <Category("_Sounds")> Public Property Jump As IO.Stream
     <Category("_Sounds")> Public Property Shoot As IO.Stream
     <Category("_Sounds")> Public Property Melee As IO.Stream
-    <Category("_Sounds")> Public Property Hit As IO.Stream
-    <Category("_Sounds")> Public Property Dead As IO.Stream
 End Class

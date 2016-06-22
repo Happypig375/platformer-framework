@@ -1,7 +1,7 @@
 ﻿Public Class Switch
     Inherits Subject
     <Category("_SwitcDetails")> Public Property OnlyActivateWhenFireButton As Boolean
-    <Category("_SwitchDetails")> Public Property SwitchNumber As Integer
+    <Category("_SwitchDetails")> Public Property SwitchID As Integer
 
     <Category("_WhenSwitched")> Public Property ChangeSprite As Sprite
     <Category("_WhenSwitched")> Public Property PlaySound As IO.Stream

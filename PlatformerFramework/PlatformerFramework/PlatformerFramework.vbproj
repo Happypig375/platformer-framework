@@ -70,10 +70,16 @@
     <Compile Include="Button.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Collectable.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="FinishLevel.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Health.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HurtingZone.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="InteractiveInterface.vb">
@@ -96,6 +102,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Lives.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mobile.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Object.vb">
