@@ -67,28 +67,29 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Button.vb">
+    <Compile Include="Levels\Level.vb" />
+    <Compile Include="Objects\Button.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Collectable.vb">
+    <Compile Include="Objects\Collectable.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FinishLevel.vb">
+    <Compile Include="Objects\FinishLevel.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Health.vb">
+    <Compile Include="Objects\Health.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="HurtingZone.vb">
+    <Compile Include="Objects\HurtingZone.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="InteractiveInterface.vb">
+    <Compile Include="Objects\InteractiveInterface.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Interface.vb">
+    <Compile Include="Objects\Interface.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DesignItem.vb">
+    <Compile Include="Objects\DesignItem.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Enum.vb" />
@@ -98,31 +99,31 @@
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Block.vb">
+    <Compile Include="Objects\Block.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Lives.vb">
+    <Compile Include="Objects\Lives.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Mobile.vb">
+    <Compile Include="Objects\Mobile.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Object.vb">
+    <Compile Include="Objects\Object.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ParticleEmitter.vb">
+    <Compile Include="Objects\ParticleEmitter.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Score.vb">
+    <Compile Include="Objects\Score.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Subject.vb">
+    <Compile Include="Objects\Subject.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Player.vb">
+    <Compile Include="Objects\Player.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Popup.vb">
+    <Compile Include="Objects\Popup.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Sprite.vb" />
@@ -141,16 +142,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Switch.vb">
+    <Compile Include="Objects\Switch.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Teleporter.vb">
+    <Compile Include="Objects\Teleporter.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Text.vb">
+    <Compile Include="Objects\Text.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Timer.vb">
+    <Compile Include="Objects\Timer.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>

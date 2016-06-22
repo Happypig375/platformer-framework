@@ -145,3 +145,57 @@ Public Enum BlockType As UShort
     ''' </summary>
     Quicksand = 16384
 End Enum
+<Flags>
+Public Enum bit As Short
+    none = 0
+    s0 = 1 << 0
+    s1 = 1 << 1
+    s2 = 1 << 2
+    s3 = 1 << 3
+    s4 = 1 << 4
+    s5 = 1 << 5
+    s6 = 1 << 6
+    s7 = 1 << 7
+    s8 = 1 << 8
+    s9 = 1 << 9
+    s10 = 1 << 10
+    s11 = 1 << 11
+    s12 = 1 << 12
+    s13 = 1 << 13
+    s14 = 1 << 14
+    all = -1
+End Enum
+
+Public Enum GradientType As Byte
+    ''' <summary>
+    ''' Left:Start, Right:End
+    ''' </summary>
+    Horizontal
+    ''' <summary>
+    ''' Up:Start, Down:End
+    ''' </summary>
+    Vertical
+    ''' <summary>
+    ''' Out:Start, In:End
+    ''' </summary>
+    Rectangular
+    ''' <summary>
+    ''' Out:Start, In:End
+    ''' </summary>
+    Ellipse
+    ''' <summary>
+    ''' Left:Start, Mid:End, Right:Start
+    ''' </summary>
+    DoubleHorizontal
+    ''' <summary>
+    ''' Up:Start, Mid:End, Down:Start
+    ''' </summary>
+    DoubleVertical
+End Enum
+Public Enum LevelType As Byte
+    Playable
+    Title
+    LevelSelector
+    Victory
+    GameOver
+End Enum
